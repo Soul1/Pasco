@@ -10,16 +10,21 @@ html {
 
 body {
   height: 100%;
+  @include os400;
+  font-size: 14px;
+  color: #000;
 }
 a {
   display: inline-block;
   text-decoration: none;
+  color: #fff;
 }
 ul,
 li {
   margin: 0;
   padding: 0;
   list-style: none;
+  display: inline-block;
 }
 
 .wrapper {
@@ -32,4 +37,9 @@ li {
 }
 .footer {
   flex: 0 0 auto;
+}
+.container{
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
 }

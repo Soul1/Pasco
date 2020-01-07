@@ -1,4 +1,122 @@
 @import "vars";
-@import "global";
 @import "fonts";
+@import "global";
+//start header
+.header {
+  &__top {
+    background-color: #191919;
 
+    &-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 40px;
+    }
+
+    &-social {
+      li {
+        & + li {
+          margin-left: 15px;
+        }
+
+        &:before {
+          font-size: 16px;
+          color: #fff;
+
+        }
+      }
+    }
+
+    &-box {
+      display: flex;
+      text-transform: uppercase;
+      align-items: center;
+    }
+  }
+
+  &__log a:before {
+    margin-right: 7px;
+  }
+
+  &__lang {
+    margin-left: 15px;
+
+    form {
+      border-left: 1px solid #545454;
+
+      &:before {
+        margin-left: 10px;
+        color: #fff;
+        font-size: 16px;
+      }
+    }
+
+    select {
+      background-color: transparent;
+      border: none;
+      color: #fff;
+      text-transform: uppercase;
+
+      option {
+        background-color: #191919;
+      }
+    }
+  }
+
+  &__info{
+    display: flex;
+
+  }
+}
+.icon-search::before {
+  font-size: 24px;
+  color: #fff;
+  padding-right: 15px;
+}
+.icon-favorite::before {
+  font-size: 24px;
+  color: #fff;
+  padding: 0px 15px;
+  border-left: 1px solid #5c5c5b;
+  border-right: 1px solid #5c5c5b;
+}
+.icon-storeshopping-cart::before {
+  font-size: 24px;
+  color: #fff;
+  padding-left: 15px;
+}
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 215px;
+}
+
+.menu {
+
+  a {
+    @include m700;
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 18px 0 25px;
+    &:after {
+      font-size: 16px;
+      margin-left: 8px;
+    }
+  }
+
+  li {
+    text-align: center;
+    & + li {
+      margin-left: 30px;
+    }
+    &:hover{
+      border-bottom: 4px solid #ff4081;
+      margin-bottom: -4px;
+    }
+  }
+
+}
+
+//end header
